@@ -1,0 +1,1 @@
+nohup ./my-app > app.log 2>&1 &
