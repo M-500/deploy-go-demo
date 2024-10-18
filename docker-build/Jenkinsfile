@@ -19,7 +19,7 @@ pipeline{
         stage("打包镜像"){
             steps {
                 echo '开始打包'
-                sh 'docker build --no-cache -t ${IMAGE_NAME} -f ./Dockerfile .'
+                sh 'docker build --no-cache -t ${IMAGE_NAME} -f ./docker-build/Dockerfile .'
 //                 sh 'docker tag ${HARBOR_PROJECT}/${IMAGE_NAME}:${TAG} ${HARBOR_URL}/${HARBOR_PROJECT}/${IMAGE_NAME}:${TAG}'
                 echo "打包成功"
             }
